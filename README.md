@@ -12,3 +12,9 @@ source venv/bin/activate
 ```bash
 make install
 ```
+
+## ssh-key agent
+```bash
+eval "$(ssh-agent -s)" 
+ssh-add ~/.ssh/id_rsa_priv
+```
