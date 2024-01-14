@@ -18,3 +18,8 @@ make install
 eval "$(ssh-agent -s)" 
 ssh-add ~/.ssh/id_rsa_priv
 ```
+
+## ToDo:
+- [ ] Use AWS Code Build
+- [ ] Dockerize the app
+- [ ] Use AWS Elastic Container Registry (ECR)
