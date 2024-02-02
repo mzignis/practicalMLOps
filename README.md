@@ -20,6 +20,6 @@ ssh-add ~/.ssh/id_rsa_priv
 ```
 
 ## ToDo:
-- [ ] Use AWS Code Build
+- [x] Use AWS Code Build
 - [x] Dockerize the app
 - [ ] Use AWS Elastic Container Registry (ECR)
