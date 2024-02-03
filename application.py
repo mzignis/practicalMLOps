@@ -1,12 +1,22 @@
 from flask import Flask
 
-app = Flask(__name__)
+
+# -------------- library code -------------- #
+def say_hello(username: str = "World"):
+    return f'<p>Hello {username}!</p>\n'
 
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
+# -------------- application code -------------- #
+application = Flask(__name__)
 
 
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+@application.route('/')
+def index():
+    return say_hello()
+
+
+# -------------- main -------------- #
+if __name__ == "__main__":
+    import os
+    host = os.environ.get('HOST', '127.0.0.1')
+    application.run(host=host)
