@@ -19,7 +19,14 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa_priv
 ```
 
-## ToDo:
-- [x] Use AWS Code Build
-- [x] Dockerize the app
-- [ ] Use AWS Elastic Container Registry (ECR)
+## Docker
+Build and run the docker container
+```bash
+make docker-build
+make docker-run
+```
+
+Push docker to ECR
+```bash
+make docker-ecr-push
+```
