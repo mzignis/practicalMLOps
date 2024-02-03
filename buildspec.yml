@@ -11,3 +11,7 @@ hooks:
       branches:
         only:
           - main
+
+artifacts:
+  files:
+    - '**/*'
