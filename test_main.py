@@ -1,9 +1,6 @@
-from main import add
+import requests
 
 
 def test_add():
-    assert add(1, 2) == 3
-    assert add(1.0, 2.0) == 3.0
-    assert add(1, 2.0) == 3.0
-    assert add(1.0, 2) == 3.0
-
+    assert requests.get('http://127.0.0.1:5000').status_code == 200
+    assert requests.get('http://127.0.0.1:5000').text == 'Hello world!'
