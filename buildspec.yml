@@ -4,3 +4,10 @@ phases:
   build:
     commands:
        - make install
+       -
+hooks:
+  - event: "push"
+    filters:
+      branches:
+        only:
+          - main
